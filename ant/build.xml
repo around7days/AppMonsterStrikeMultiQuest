@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project default="main" basedir=".">
+
+<property file="ant.properties"/>
+
+	<target name="main" >
+		<echo>---ビルド開始</echo>
+
+		<!-- warファイル対象の作成 -->
+		<mkdir dir="${temp.dir}" />
+		<copy todir="${temp.dir}">
+			<fileset dir="../WebContent">
+				<include name="WEB-INF/**" />
+			</fileset>
+		</copy>
+
+		<!-- warファイル生成 -->
+		<jar basedir="${temp.dir}" destfile="${dist.dir}/${web.app.name}.war" />
+
+		<!-- ゴミ掃除 -->
+		<delete dir="${temp.dir}" />
+
+		<echo>---ビルド完了</echo>
+	</target>
+
+</project>
