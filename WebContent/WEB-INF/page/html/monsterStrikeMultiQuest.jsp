@@ -358,7 +358,6 @@ footer {
         <option value="4" >攻略[究極/超絶]</option>
         <option value="11">攻略[極]</option>
         <option value="50">攻略[ハクア]</option>
-        <option value="91">攻略[火ノエル]</option>
         <option value="12">攻略[神殿]</option>
       </select>
     <br>

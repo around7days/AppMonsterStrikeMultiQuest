@@ -79,7 +79,7 @@ public class Logic {
                 // 値取得
                 String id = bbs.select(".bbs-post-number").text();
                 String time = bbs.select(".bbs-posted-time").text();
-                String questUrl = bbs.select(".bbs-post-body>a").text();
+                String questUrl = bbs.select(".bbs-post-body>a").first().text();
                 if (bbs.select(".bbs-post-body>a").isEmpty()) {
                     continue;
                 }
