@@ -101,6 +101,7 @@ public class Logic {
                 resultList.add(multiQuestInfo);
 
             } catch (Exception e) {
+                // エラーは握り潰す
                 logger.error(e);
             }
 
