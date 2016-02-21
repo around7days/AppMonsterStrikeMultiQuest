@@ -1,7 +1,6 @@
 package main;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -12,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import main.base.AjaxErrorException;
 import main.bean.MultiQuestInfoBean;
-import main.consts.Consts;
 import main.logic.Logic;
 
 import org.apache.log4j.Logger;
@@ -92,15 +90,9 @@ public class MainServlet extends HttpServlet {
         Logic logic = new Logic();
 
         /*
-         * マルチ情報の取得処理 ※値が取得できるまで指定回数繰り返す
+         * マルチ情報の取得処理
          */
-        List<MultiQuestInfoBean> multiInfoList = new ArrayList<>();
-        for (int loopCnt = 0; loopCnt < Consts.LOOP_CNT_MAX; loopCnt++) {
-            multiInfoList = logic.multiQuestData(bbsType);
-            if (!multiInfoList.isEmpty()) {
-                break;
-            }
-        }
+        List<MultiQuestInfoBean> multiInfoList = logic.multiQuestData(bbsType);
 
         /*
          * Json形式に変換

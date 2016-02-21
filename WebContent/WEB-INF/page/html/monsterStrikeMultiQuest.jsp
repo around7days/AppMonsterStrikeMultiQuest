@@ -58,7 +58,7 @@ $(function(){0
         "bbsType" : $("#bbsType").val(),  //bbsType
       },
       dataType: 'json',
-      timeout: 15000, // 15秒
+      timeout: 5000, // 5秒
     }).done(function(data, textStatus, jqXHR){
       // 成功
 
