@@ -16,7 +16,7 @@
   独自javascript
 -->
 <script type="text/javascript">
-$(function(){0
+$(function(){
 /* $(document).on("pagecreate", function(event, ui) { */
 
   // 前回出力時のマルチクエスト情報
