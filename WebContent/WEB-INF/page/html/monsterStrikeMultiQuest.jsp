@@ -29,6 +29,9 @@ $(function(){
     // ストレージから値の取得
     f_get_storage();
 
+    // 画面の再描画処理
+    f_display_refresh();
+
     // データ取得処理
     f_get_data();
   }
@@ -44,7 +47,7 @@ $(function(){
   /**
    * データ取得処理
    */
-  function f_get_data(bbsType){
+  function f_get_data(){
     // くるくる表示
     $.mobile.loading('show');
     // リフレッシュアンカー非表示
